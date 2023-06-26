@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+  <title>Login</title>
+  <link rel="stylesheet" href="../resources/css/styles.css"/>
+</h:head>
+<h:body>
+  <div class="header">
+    <h1>Login</h1>
+  </div>
+  <h:form>
+
+      <div class="centered-content">
+        <div>
+            <label for="account">Account:</label>
+            <h:inputText id="account"  value="#{registerBean.account}" required="true" requiredMessage="Account cannot be Empty" />
+            <h:message for="account" style="color: red" />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <h:inputSecret id="password"  value="#{registerBean.password}" required="true" requiredMessage="Password cannot be empty" />
+            <h:message for="password" style="color: red" />
+        </div>
+
+        <div class="button-container">
+           <h:commandButton value="Login" styleClass="Button" action="#{userBean.login(registerBean.account,registerBean.password)}" />
+           <h:commandButton value="Register" styleClass="Button" action="#{registerBean.register}"/>
+        </div>
+      </div>
+
+   <div class="footer">
+    <ui:include src="footer.xhtml"/>
+   </div>
+  </h:form>
+
+</h:body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+  <title>Edit Portfolio</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../resources/css/styles.css"/>
+  <h:outputScript library="js" name="jquery-min-3.6.0.js"/>
+  <h:outputScript library="js" name="scripts.js"/>
+
+</h:head>
+<body>
+     <div class="header">
+        <h1>Edit Portfolio</h1>
+     </div>
+
+<!-- Navigation bar -->
+     <ul class="menu">
+         <li><a href="homePage.xhtml">Home</a></li>
+     </ul>
+
+     <div class="main">
+     <div class="content">
+       <h:form id="Title" styleClass="edit" >
+     <div class="edit">
+       <h:outputLabel for="Name" >Name</h:outputLabel>
+       <h:inputText id="Name" styleClass="textarea" value="#{editPortfolioBean.editPName}" /><br/>
+     </div>
+     <div class="edit">
+       <h:outputLabel for="Classes">Classes</h:outputLabel>
+       <h:inputText id="Classes" styleClass="textarea" value="#{editPortfolioBean.editPClasses}"/><br/>
+     </div>
+     <div class="edit">
+       <h:outputLabel for="interest">Interest</h:outputLabel>
+       <h:inputText id="interest" styleClass="textarea"  value="#{editPortfolioBean.editPinterest}"/><br/>
+     </div>
+     <div class="edit">
+       <h:outputLabel for="experience">Experience</h:outputLabel>
+       <h:inputText id="experience" styleClass="textarea" value="#{editPortfolioBean.editPExperience}"/><br/>
+
+     </div>
+
+     <div class="edit">
+       <h:outputLabel for="skill">Skills</h:outputLabel>
+       <h:inputText id="skill" styleClass="textarea" value="#{editPortfolioBean.editPSkill}"/><br/>
+     </div>
+     <div class="edit">
+       <h:outputLabel for="careerGoals">Career Goals</h:outputLabel>
+       <h:inputText id="careerGoals" styleClass="textarea" value="#{editPortfolioBean.editPCareer}" /><br/>
+     </div>
+     <h:commandButton value="Save" styleClass="Button" action="#{editPortfolioBean.save(true)}" style="margin-left: 55px"/>
+</h:form>
+  </div>
+     </div>
+     <div class="footer">
+         <ui:include src="footer.xhtml"/>
+     </div>
+</body>
+</html>

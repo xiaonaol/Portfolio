@@ -1,0 +1,46 @@
+
+  {
+    "title": "AIVTuber",
+    "summary": "A prototype of an AI virtual YouTuber",
+    "description": "This project aims to create a realistic and interactive AI virtual YouTuber using deep learning and computer vision techniques.",
+    "keywords": [
+      "AI",
+      "deep learning",
+      "computer vision",
+    ],
+    "type": "web development",
+    "collaborators": [
+      "Liu Zijing"
+    ],
+    "link": "https://github.com/ponlponl123/-Prototype-AIVTuber"
+  },
+  {
+    "title": "Questionnaire Management System",
+    "summary": "A web-based questionnaire management system",
+    "description": "This project allows users to create and manage surveys for various purposes. It supports different question types, templates, and designs. It also provides real-time analysis and reports of the responses.",
+    "keywords": [
+      "web development",
+      "survey",
+      "data analysis"
+    ],
+    "type": "web development",
+    "collaborators": [
+      "Liu Zijing"
+    ],
+    "link": "https://github.com/xiaonaol/Questionnaire"
+  },
+  {
+    "title": "MusicRecommender",
+    "summary": "A music recommendation system based on user preferences and emotions",
+    "description": "This project uses machine learning and natural language processing to recommend music to users based on their preferences and emotions. It also allows users to rate and comment on the songs.",
+    "keywords": [
+      "machine learning",
+      "natural language processing",
+      "music recommendation"
+    ],
+    "type": "machine learning",
+    "collaborators": [
+      "Liu Zijing"
+    ],
+    "link": "https://github.com/xiaonaol/MusicRecommender"
+  }

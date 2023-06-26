@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+
+<h:head>
+    <title>Project Details</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../resources/css/styles.css"/>
+    <h:outputScript library="js" name="jquery-min-3.6.0.js"/>
+</h:head>
+
+<h:body>
+    <div class="header">
+        <h1>Project Details</h1>
+    </div>
+
+    <ul class="menu">
+        <li><a href="homePage.xhtml">Home</a></li>
+        <li>
+            <h:outputLink value="edit.xhtml?id=#{projectDetailsBean.getCurrentProject()}">
+                Edit
+            </h:outputLink>
+        </li>
+    </ul>
+
+
+    <div class="main">
+        <div class="content">
+            <h2>Title</h2>
+            <h:outputText value=" #{projectDetailsBean.getCurrentProject().title}" />
+        </div>
+        <div class="content">
+            <h2>Summary</h2>
+            <h:outputText value=" #{projectDetailsBean.getCurrentProject().summary}" />
+        </div>
+        <div class="content">
+            <h2>Description</h2>
+            <h:outputText value=" #{projectDetailsBean.getCurrentProject().description}" />
+        </div>
+        <div class="keyword">
+            <h2>Keyword</h2>
+            <h:outputText id="keyword" value=" #{projectDetailsBean.getCurrentProject().keywords }" />
+        </div>
+        <div class="type">
+            <h2>Type</h2>
+            <h:outputText value=" #{projectDetailsBean.getCurrentProject().type}" />
+        </div>
+        <div class="collaborators">
+            <h2>Collaborators</h2>
+            <h:outputText value=" #{projectDetailsBean.getCurrentProject().collaborators}" />
+        </div>
+        <div class="content">
+            <h2>Link</h2>
+            <h:outputLink value="#{projectDetailsBean.getCurrentProject().link}" >Download</h:outputLink>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+
+    <div class="footer">
+        <ui:include src="footer.xhtml"/>
+    </div>
+</h:body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="../resources/css/styles.css"/>
+</h:head>
+
+
+<h:body>
+  <div class="header">
+    <h1>My Portfolio</h1>
+  </div>
+
+  <ul class="menu">
+    <li><a href="homePage.xhtml">Home</a></li>
+    <li><a href="projectAdd.xhtml">Add Project</a></li>
+  </ul>
+
+  <h:form>
+    <div class="main">
+    <ui:repeat value="#{portfolioBean.userPortfolios}" var="portfolio">
+      <div class="content">
+        <h2>Student ID</h2>
+        <h:outputText value=" #{portfolio.id}" />
+      </div>
+      <div class="content">
+        <h2>Name</h2>
+        <h:outputText value=" #{portfolio.name}" />
+      </div>
+      <div class="content">
+        <h2>Class</h2>
+        <h:outputText value=" #{portfolio.classes}" />
+      </div>
+      <div class="content">
+        <h2>Interests</h2>
+        <h:outputText value=" #{portfolio.interests}" />
+      </div>
+      <div class="content">
+        <h2>Skills</h2>
+        <h:outputText value=" #{portfolio.skills}" />
+      </div>
+      <div class="content">
+        <h2>Career Goal</h2>
+        <h:outputText value=" #{portfolio.careGoals}" />
+      </div>
+      <div class="project">
+        <h2>Project List</h2>
+        <ul>
+          <ui:repeat value="#{projectBean.userProjects}" var="project">
+            <li><h:commandLink value="#{project.title}" action="#{projectBean.getSelectedProject(project.title)}">
+              <f:param name="title" value="#{project.title}"/>
+            </h:commandLink></li>
+          </ui:repeat>
+        </ul>
+      </div>
+      <h:commandButton value="Edit" action="#{portfolioBean.getSelectedPortfolio(portfolio.id)}"/>
+    </ui:repeat>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+    <ui:include src="footer.xhtml"/>
+    </div>
+  </h:form>
+
+</h:body>
+</html>

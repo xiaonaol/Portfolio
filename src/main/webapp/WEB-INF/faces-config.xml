@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                                  http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <managed-bean>
+        <managed-bean-name>userBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.UserBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>registerBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.RegisterBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>createBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.CreateBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>editPortfolioBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.EditPortfolioBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>addBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.AddBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>projectBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.ProjectBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>portfolioBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.PortfolioBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>projectDetailsBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.ProjectDetailsBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>editBean</managed-bean-name>
+        <managed-bean-class>com.example.jsf.Bean.controller.EditBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+<!--    <converter>
+        <converter-id>projectConverter</converter-id>
+        <converter-class>com.example.jsf_demo.Bean.ProjectConverter</converter-class>
+    </converter>-->
+
+
+
+</faces-config>

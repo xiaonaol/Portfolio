@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+  <title>Project Add</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../resources/css/styles.css"/>
+  <h:outputScript library="js" name="jquery-min-3.6.0.js"/>
+  <h:outputScript library="js" name="scripts.js"/>
+
+</h:head>
+<body>
+<div class="header">
+    <h1>Add Project</h1>
+</div>
+
+<!-- Navigation bar -->
+<ul class="menu">
+  <li><a href="homePage.xhtml">Home</a></li>
+</ul>
+
+<div class="main">
+  <div class="content">
+    <h:form id="Title" styleClass="edit" >
+      <div class="edit">
+        <h:outputLabel for="id" >Id</h:outputLabel>
+        <h:inputText id="id" styleClass="textarea" value="#{addBean.addId}" /><br/>
+      </div>
+      <div class="edit">
+        <h:outputLabel for="title" >Title</h:outputLabel>
+        <h:inputText id="title" styleClass="textarea" value="#{addBean.addTitle}" /><br/>
+      </div>
+      <div class="edit">
+        <h:outputLabel for="summary">Summary</h:outputLabel>
+        <h:inputText id="summary" styleClass="textarea" value="#{addBean.addSummary}"/><br/>
+      </div>
+      <div class="edit">
+        <h:outputLabel for="description">Description</h:outputLabel>
+        <h:inputText id="description" styleClass="textarea"  value="#{addBean.addDescription}"/><br/>
+      </div>
+      <div class="edit">
+        <h:outputLabel for="keywordsArea">Keywords</h:outputLabel>
+        <h:inputText id="keywordsArea" styleClass="textarea" value="#{addBean.addKeyword}"/><br/>
+
+      </div>
+
+      <div class="edit">
+        <h:outputLabel for="type">Type</h:outputLabel>
+        <h:inputText id="type" styleClass="textarea" value="#{addBean.addType}"/><br/>
+      </div>
+      <div class="edit">
+        <h:outputLabel for="collaborators">Collaborators</h:outputLabel>
+        <h:inputText id="collaborators" styleClass="textarea" value="#{addBean.addCollaborator}" /><br/>
+      </div>
+      <h:commandButton value="Add" styleClass="Button" action="#{addBean.add(true)}" style="margin-left: 55px"/>
+    </h:form>
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <ui:include src="footer.xhtml"/>
+</div>
+
+
+</body>
+</html>
